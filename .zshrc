@@ -40,7 +40,7 @@ ZSH_THEME="gianu"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python pip debian docker fabric gpg-agent sublime sudo pass)
+plugins=(git python pip debian docker fabric sublime sudo pass)
 
 source $ZSH/oh-my-zsh.sh
 
