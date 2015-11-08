@@ -52,3 +52,9 @@ eval "$(rbenv init -)"
 
 export EDITOR=vim
 
+# aliases
+alias cx=chef exec
+alias bx=bundle exec
+alias cxk=chef exec knife
+alias bxk=bundle exec knife
+
