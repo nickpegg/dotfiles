@@ -1,7 +1,10 @@
 [dotfiles]
 repository = ~/.dotfiles
-prefix = .
 ignore = [
   '.git',
   '.gitignore',
   '*.swp']
+packages = [
+  'config',
+  'config/i3status',
+  'i3']
