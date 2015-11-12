@@ -157,6 +157,11 @@ bar {
         status_command i3status
 }
 
+# Set up the media keys
+bindsym XF86AudioMute exec amixer sset Master toggle
+bindsym XF86AudioRaiseVolume exec amixer sset Master 3%+
+bindsym XF86AudioLowerVolume exec amixer sset Master 3%-
+
 # fire off a startup script
 exec /bin/sh ~/.i3/startup
 
