@@ -2,4 +2,4 @@
 	name = Nick Pegg
 	email = nick@nickpegg.com
 [push]
-	default = matching
+	default = current
