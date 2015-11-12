@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Script to do stuff as part of i3 startup
+# Script to do stuff as part of i3 startup. This is mostly here because
+# you can't do conditionals in i3 config
 
 # Use xmodmap to neuter some screwy media keys
 if [ -f ~/.xmodmaprc ]; then
