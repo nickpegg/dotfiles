@@ -156,3 +156,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# fire off a startup script
+exec /bin/sh ~/.i3/startup
+

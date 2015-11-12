@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Script to do stuff as part of i3 startup
+
+# Use xmodmap to neuter some screwy media keys
+if [ -f ~/.xmodmaprc ]; then
+  xmodmap ~/.xmodmaprc
+fi
+
