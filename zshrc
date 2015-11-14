@@ -57,6 +57,7 @@ alias cx='chef exec'
 alias bx='bundle exec'
 alias cxk='chef exec knife'
 alias bxk='bundle exec knife'
+alias tdbag='knife solo data bag --data-bag-path test/integration/data_bags --secret-file test/integration/encrypted_data_bag_secret'
 
 
 envfile="$HOME/.gnupg/gpg-agent.env"
