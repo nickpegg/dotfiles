@@ -60,11 +60,11 @@ alias bxk='bundle exec knife'
 alias tdbag='knife solo data bag --data-bag-path test/integration/data_bags --secret-file test/integration/encrypted_data_bag_secret'
 
 
-envfile="$HOME/.gnupg/gpg-agent.env"
-if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
-  eval "$(cat "$envfile")"
-else
-  eval "$(gpg-agent --daemon --enable-ssh-support --write-env-file "$envfile")"
-fi
-export GPG_AGENT_INFO  # the env file does not contain the export statement
-export SSH_AUTH_SOCK   # enable gpg-agent for ssh
+#envfile="$HOME/.gnupg/gpg-agent.env"
+#if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
+#  eval "$(cat "$envfile")"
+#else
+#  eval "$(gpg-agent --daemon --enable-ssh-support --write-env-file "$envfile")"
+#fi
+#export GPG_AGENT_INFO  # the env file does not contain the export statement
+#export SSH_AUTH_SOCK   # enable gpg-agent for ssh
