@@ -53,6 +53,7 @@ eval "$(rbenv init -)"
 export EDITOR=vim
 
 # aliases
+alias fdate='date +%Y-%m-%d_%H-%M-%S'  # useful for dates in filenames
 alias cx='chef exec'
 alias bx='bundle exec'
 alias cxk='chef exec knife'
