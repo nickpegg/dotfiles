@@ -157,6 +157,21 @@ bar {
         status_command i3status
 }
 
+# Set the decoration colors
+set $base1    #64FFDA
+set $base2    #1DE9B6
+set $base3    #00BFA5
+set $accent1  #FF4081
+set $accent2  #F50057
+set $accent3  #C51162
+set $gray     #616161
+
+# class                 border    backgr.   text    indicator
+client.focused          $base3    $base3    #000000 #000000
+client.focused_inactive $gray     $gray     #000000 #000000
+client.unfocused        $gray     $gray     #000000 #000000
+client.urgent           $accent1  $accent1  #000000 #000000
+
 # Set up the media keys
 bindsym XF86AudioMute exec amixer sset Master toggle
 bindsym XF86AudioRaiseVolume exec amixer sset Master 3%+
@@ -167,4 +182,3 @@ bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 
 # fire off a startup script
 exec /bin/sh ~/.i3/startup
-
