@@ -188,6 +188,11 @@ bindsym XF86AudioMute exec amixer sset Master toggle
 bindsym XF86AudioRaiseVolume exec amixer sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer sset Master 3%-
 
+# Screen brightness
+set $backlightinc 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc $backlightinc
+bindsym XF86MonBrightnessDown exec xbacklight -dec $backlightinc
+
 # Lock screen
 bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 
