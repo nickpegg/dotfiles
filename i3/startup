@@ -9,4 +9,5 @@ if [ -f ~/.xmodmaprc ]; then
 fi
 
 xscreensaver -no-splash &
+nm-applet
 
