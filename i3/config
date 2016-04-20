@@ -184,9 +184,9 @@ bar {
 
 
 # Set up the media keys
-bindsym XF86AudioMute exec amixer sset Master toggle
-bindsym XF86AudioRaiseVolume exec amixer sset Master 3%+
-bindsym XF86AudioLowerVolume exec amixer sset Master 3%-
+bindsym XF86AudioMute exec amixer -D pulse set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 3%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 3%-
 
 # Screen brightness
 set $backlightinc 5
