@@ -5,10 +5,7 @@
 
 xrandr -s 2048x1152
 
-# Use xmodmap to neuter some screwy media keys
-if [ -f ~/.xmodmaprc ]; then
-  xmodmap ~/.xmodmaprc
-fi
+setxkbmap -option 'ctrl:nocaps'
 
 xscreensaver -no-splash &
 nm-applet &
