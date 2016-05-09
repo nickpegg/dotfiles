@@ -3,7 +3,7 @@
 # Script to do stuff as part of i3 startup. This is mostly here because
 # you can't do conditionals in i3 config
 
-xrandr --dpi 192
+xrandr --dpi 160
 setxkbmap -option 'ctrl:nocaps'
 
 xscreensaver -no-splash &
