@@ -4,6 +4,8 @@
 # you can't do conditionals in i3 config
 
 xsetroot -solid "#000000"
+
+# set xrandr DPI to the auto-detected DPI so that i3 looks right
 xrandr --dpi 160
 setxkbmap -option 'ctrl:nocaps'
 

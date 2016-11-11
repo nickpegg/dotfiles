@@ -194,7 +194,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc $backlightinc -time 100
 bindsym XF86MonBrightnessDown exec xbacklight -dec $backlightinc -time 100
 
 # Lock screen
-bindsym $mod+Shift+Escape exec gnome-screensaver-command --lock
+bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 
 # fire off a startup script
 exec /bin/sh ~/.i3/startup
