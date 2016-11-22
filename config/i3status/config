@@ -7,6 +7,7 @@ order += "wireless wlp58s0"
 order += "ipv6"
 
 order += "disk /"
+order += "disk /home"
 
 order += "load"
 order += "cpu_temperature 0"
@@ -16,6 +17,10 @@ order += "tztime local"
 
 disk "/" {
 	format = "%avail /"
+}
+
+disk "/home" {
+	format = "%avail /home"
 }
 
 wireless wlp58s0 {
