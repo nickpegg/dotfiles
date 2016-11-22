@@ -7,4 +7,5 @@ ignore = [
 packages = [
   'config',
   'config/i3status',
+  'config/pulse',
   'i3']
