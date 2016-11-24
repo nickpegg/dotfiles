@@ -3,12 +3,14 @@
 # Script to do stuff as part of i3 startup. This is mostly here because
 # you can't do conditionals in i3 config
 
+xsetroot -solid "#000000"
+
+# set xrandr DPI to the auto-detected DPI so that i3 looks right
+xrandr --dpi 96 --output eDP1 --mode 1920x1080
 setxkbmap -option 'ctrl:nocaps'
 
-# Use xmodmap to neuter some screwy media keys
-if [ -f ~/.xmodmaprc ]; then
-  xmodmap ~/.xmodmaprc
-fi
-
 xscreensaver -no-splash &
+nm-applet &
 
+# Restart i3 after we set DPI to get font sizes right
+i3-msg restart
