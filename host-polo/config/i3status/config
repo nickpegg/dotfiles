@@ -1,0 +1,53 @@
+general {
+	colors = true
+	interval = 5
+}
+
+order += "wireless wlp58s0"
+order += "ipv6"
+
+order += "disk /"
+order += "disk /home"
+
+order += "load"
+order += "cpu_temperature 0"
+order += "battery 0"
+
+order += "tztime local"
+
+disk "/" {
+	format = "%avail /"
+}
+
+disk "/home" {
+	format = "%avail /home"
+}
+
+wireless wlp58s0 {
+	format_up = "%ip (%quality at %essid, %bitrate / %frequency)"
+	format_down = "wifi down"
+}
+
+ipv6 {
+	format_up = "%ip"
+	format_down = "no ipv6"
+}
+
+load {
+	format = "%1min"
+}
+
+cpu_temperature 0 {
+	format = "%degrees °C"
+	max_threshold = 90
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
+}
+
+battery 0 {
+	format = "%status %percentage %remaining (%consumption)"
+	low_threshold = 30
+}
+
+tztime local {
+	format = "%Y-%m-%d %H:%M:%S"
+}
