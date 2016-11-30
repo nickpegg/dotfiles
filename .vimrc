@@ -16,7 +16,7 @@ set numberwidth=5
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set smarttab
+"set smarttab
 
 set splitbelow
 set splitright
@@ -42,6 +42,12 @@ let g:detectindent_preferred_indent=2
 augroup DetectIndent
   autocmd!
   autocmd BufReadPost * DetectIndent
+augroup END
+
+" Fix trailing whitespace on save
+augroup onsave
+  autocmd!
+  autocmd BufWritePost * FixWhitespace
 augroup END
 
 " Break bad habits
