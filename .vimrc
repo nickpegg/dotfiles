@@ -18,6 +18,8 @@ set shiftwidth=2
 set expandtab
 "set smarttab
 
+set scrolloff=5
+
 set splitbelow
 set splitright
 
