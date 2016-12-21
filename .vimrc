@@ -63,3 +63,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Include any machine/loality-specific things, try to keep this .vimrc
+" standard across everything
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
