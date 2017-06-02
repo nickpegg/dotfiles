@@ -1,5 +1,9 @@
 set nocompatible
 
+silent !mkdir -p $HOME/.tmp/vim/
+
+set directory=$HOME/.tmp/vim//
+
 set nobackup
 set nowritebackup
 set history=50
