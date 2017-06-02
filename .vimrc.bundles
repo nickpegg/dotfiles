@@ -13,6 +13,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'roryokane/detectindent'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
