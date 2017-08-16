@@ -47,14 +47,18 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH="$HOME/bin:$PATH"
 
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
 if [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
+
+# Set up autocompletions
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
 
 export EDITOR=vim
 
@@ -65,6 +69,7 @@ alias bx='bundle exec'
 alias cxk='chef exec knife'
 alias bxk='bundle exec knife'
 alias tdbag='knife solo data bag --data-bag-path test/integration/data_bags --secret-file test/integration/encrypted_data_bag_secret'
+alias gitflake="git status | grep modified | awk '{print \$2}' | xargs -n1 pep8"
 
 #envfile="$HOME/.gnupg/gpg-agent.env"
 #if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
