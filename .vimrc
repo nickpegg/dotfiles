@@ -53,7 +53,7 @@ augroup END
 " Fix trailing whitespace on save
 augroup onsave
   autocmd!
-  autocmd BufWritePost * FixWhitespace
+  autocmd BufWritePre * FixWhitespace
 augroup END
 
 " Break bad habits
