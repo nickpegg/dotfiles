@@ -56,6 +56,11 @@ augroup END
 " js settings
 let g:jsx_ext_required = 0
 
+" ctrlp settings
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules$',
+  \ }
+
 " Fix trailing whitespace on save
 augroup onsave
   autocmd!
