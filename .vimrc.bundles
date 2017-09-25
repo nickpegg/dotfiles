@@ -14,6 +14,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'roryokane/detectindent'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on

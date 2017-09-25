@@ -24,6 +24,9 @@ set expandtab
 
 set scrolloff=5
 
+"show a line at column 80
+set colorcolumn=80
+
 set splitbelow
 set splitright
 
@@ -49,6 +52,9 @@ augroup DetectIndent
   autocmd!
   autocmd BufReadPost * DetectIndent
 augroup END
+
+" js settings
+let g:jsx_ext_required = 0
 
 " Fix trailing whitespace on save
 augroup onsave
