@@ -1,50 +1,32 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+if [ ! -f "$HOME/.zsh/antigen.zsh" ]; then
+  echo "Antigen is not installed! Bailing."
+  return
+fi
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="gianu"
+source "$HOME/.zsh/antigen.zsh"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+antigen use oh-my-zsh
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+plugins=(
+  debian
+  docker
+  git
+  pass
+  pip
+  python
+  sudo
+)
+for plugin in $plugins; do
+  antigen bundle $plugin
+done
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+antigen theme gianu
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+antigen apply
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python pip debian docker sudo pass)
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
+# Important variables
 export PATH="$HOME/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -52,15 +34,16 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+export EDITOR=vim
+
+# Use Virtualenvwrapper if it exists
 if [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
-# Set up autocompletions
-fpath=(~/.zsh/completions $fpath) 
+# Set up custom autocompletions
+fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
-
-export EDITOR=vim
 
 # aliases
 alias fdate='date +%Y-%m-%d_%H-%M-%S'  # useful for dates in filenames
