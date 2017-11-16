@@ -12,5 +12,9 @@ setxkbmap -option 'ctrl:nocaps'
 xscreensaver -no-splash &
 nm-applet &
 
+if which dropbox; then
+  dropbox start
+fi
+
 # Restart i3 after we set DPI to get font sizes right
 i3-msg restart
