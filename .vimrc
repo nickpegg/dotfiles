@@ -43,6 +43,8 @@ if filereadable(expand("~/.vimrc.languages"))
   source ~/.vimrc.languages
 endif
 
+filetype plugin on
+
 "AirlineTheme simple
 
 " DetectIndent settings
