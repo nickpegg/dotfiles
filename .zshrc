@@ -62,3 +62,8 @@ alias gitflake="git status | grep modified | awk '{print \$2}' | xargs -n1 pep8"
 #fi
 #export GPG_AGENT_INFO  # the env file does not contain the export statement
 #export SSH_AUTH_SOCK   # enable gpg-agent for ssh
+
+# Load in a local zshrc if it's available
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
