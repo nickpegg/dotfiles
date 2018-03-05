@@ -52,7 +52,8 @@ alias bx='bundle exec'
 alias cxk='chef exec knife'
 alias bxk='bundle exec knife'
 alias tdbag='knife solo data bag --data-bag-path test/integration/data_bags --secret-file test/integration/encrypted_data_bag_secret'
-alias gitflake="git status | grep modified | awk '{print \$2}' | xargs -n1 pep8"
+alias gitflake="git status | grep modified | grep '.py' | awk '{print \$2}' | xargs -n1 pep8"
+alias fix_completion="rm ~/.zcompdump* ~/.antigen/.zcompdump*"
 
 #envfile="$HOME/.gnupg/gpg-agent.env"
 #if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
