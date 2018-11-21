@@ -34,9 +34,12 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+" colorscheme stuff
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
+let g:gruvbox_contrast_light='hard'
+colorscheme gruvbox
 
 " Language-specific settings
 if filereadable(expand("~/.vimrc.languages"))

@@ -45,6 +45,12 @@ fi
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
+# Set up colors for gruvbox
+gruvbox_palette="$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+if [ -f $gruvbox_palette_path ]; then
+    source "$gruvbox_palette"
+fi
+
 # aliases
 alias fdate='date +%Y-%m-%d_%H-%M-%S'  # useful for dates in filenames
 alias cx='chef exec'
