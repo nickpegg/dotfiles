@@ -15,6 +15,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'airblade/vim-gitgutter'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
