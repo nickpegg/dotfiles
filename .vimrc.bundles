@@ -16,6 +16,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'klen/python-mode'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
