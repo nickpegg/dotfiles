@@ -69,10 +69,11 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_show_hidden = 1
 
 " Fix trailing whitespace on save
-augroup onsave
-  autocmd!
-  autocmd BufWritePre * FixWhitespace
-augroup END
+let g:strip_whitespace_on_save = 1
+
+" Disable python-mode's space errors since vim-better-whitespace does it
+" better
+let g:pymode_syntax_space_errors = 0
 
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
