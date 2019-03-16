@@ -77,6 +77,7 @@ let g:strip_whitespace_on_save = 1
 " Disable python-mode's space errors since vim-better-whitespace does it
 " better
 let g:pymode_syntax_space_errors = 0
+let g:pymode_lint_on_write = 0  " Wow this is annoying
 
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
