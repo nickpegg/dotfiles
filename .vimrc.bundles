@@ -6,7 +6,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'klen/python-mode'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'romainl/Apprentice'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
@@ -17,6 +16,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'

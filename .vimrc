@@ -68,6 +68,9 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_show_hidden = 1
 
+" fzf settings
+map <C-p> :FZF <CR>
+
 " Fix trailing whitespace on save
 let g:strip_whitespace_on_save = 1
 
