@@ -17,6 +17,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
