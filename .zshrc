@@ -73,6 +73,12 @@ alias pass-sync="pass git pull && pass git push"
 #export GPG_AGENT_INFO  # the env file does not contain the export statement
 #export SSH_AUTH_SOCK   # enable gpg-agent for ssh
 
+
+# If silversearcher is available, use that for FZF file finding
+if which ag > /dev/null; then
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+fi
+
 # Load in a local zshrc if it's available
 if [ -f "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
