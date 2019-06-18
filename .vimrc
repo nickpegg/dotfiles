@@ -72,6 +72,7 @@ let g:ctrlp_show_hidden = 1
 map <C-p> :FZF <CR>
 
 " Fix trailing whitespace on save
+let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 1
 
 " Disable python-mode's space errors since vim-better-whitespace does it
