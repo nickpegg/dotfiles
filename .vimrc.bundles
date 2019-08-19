@@ -17,6 +17,7 @@ Plugin 'junegunn/fzf.vim'
 
 " Languages
 Plugin 'klen/python-mode'
+Plugin 'ambv/black'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
