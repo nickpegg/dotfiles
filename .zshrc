@@ -86,6 +86,11 @@ if which ag > /dev/null; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 fi
 
+# If auto-updates require a reboot, yell about that when a shell is spawned
+if [ -f "/var/run/reboot-required" ]; then
+  cat /var/run/reboot-required
+fi
+
 # Load in a local zshrc if it's available
 if [ -f "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
