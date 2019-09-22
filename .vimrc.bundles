@@ -19,6 +19,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 "Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ledger/vim-ledger'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
