@@ -174,7 +174,7 @@ set     $red    #cc241d
 set     $yellow #d79921
 
 # class                 border  backgr. text    indic.  child_border
-client.focused          $bg2    $blue   $fg     $blue   $gray
+client.focused          $bg2    $bg1    $fg     $blue   $gray
 client.focused_inactive $bg2    $bg     $gray   $gray   $bg3
 client.unfocused        $bg2    $bg     $gray   $gray   $bg3
 client.urgent           $bg2    $orange $fg     $gray   $orange
@@ -187,8 +187,8 @@ bar {
         colors {
                 separator $fg
                 #                       border  bg      text
-                focused_workspace       $bg     $blue   $fg
-                active_workspace        $bg     $bg3    $fg
+                focused_workspace       $bg     $bg2    $fg
+                active_workspace        $bg     $bg     $fg
                 inactive_workspace      $bg     $bg     $gray
                 urgent_workspace        $gray   $orange $fg
         }
