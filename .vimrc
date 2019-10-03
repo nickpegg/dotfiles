@@ -81,6 +81,9 @@ let g:strip_whitespae_confirm=0
 let g:pymode_syntax_space_errors = 0
 let g:pymode_lint_on_write = 0  " Wow this is annoying
 
+" Format python code
+autocmd BufWritePre *.py execute ':Black'
+
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
