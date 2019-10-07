@@ -88,6 +88,7 @@ endif
 
 " Black uses 88 character lines rather than 80
 autocmd BufNewFile,BufRead *.py set colorcolumn=89
+autocmd BufNewFile,BufRead *.py set textwidth=88
 
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
