@@ -86,6 +86,9 @@ if exists("g:load_black")
   autocmd BufWritePre *.py execute ':Black'
 endif
 
+" Black uses 88 character lines rather than 80
+autocmd BufNewFile,BufRead *.py set colorcolumn=89
+
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
