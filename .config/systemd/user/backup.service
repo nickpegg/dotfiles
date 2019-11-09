@@ -1,0 +1,7 @@
+[Unit]
+Description=Run a backup
+Requires=mnt-borg2.mount
+
+[Service]
+Type=oneshot
+ExecStart=/home/nick/bin/backup

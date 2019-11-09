@@ -1,0 +1,8 @@
+[Unit]
+Description=Run a backup
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target
