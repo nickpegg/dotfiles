@@ -1,8 +1,9 @@
 [Unit]
-Description=Run a backup
+Description=Backup timer
 
 [Timer]
 OnCalendar=hourly
+Persistent=false
 
 [Install]
 WantedBy=timers.target

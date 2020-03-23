@@ -1,5 +1,5 @@
 [Unit]
-Description=Run a backup check weekly
+Description=Timer - Run a backup check weekly
 
 [Timer]
 OnCalendar=weekly

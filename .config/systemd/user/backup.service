@@ -4,4 +4,4 @@ Requires=mnt-borg2.mount
 
 [Service]
 Type=oneshot
-ExecStart=/home/nick/bin/backup
+ExecStart=/usr/local/bin/borgmatic create -v2
