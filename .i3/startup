@@ -6,7 +6,7 @@
 xsetroot -solid "#000000"
 
 # set xrandr DPI to the auto-detected DPI so that i3 looks right
-xrandr --dpi 96 --output eDP1 --mode 1600x900
+xrandr --dpi 96 --output eDP1 --mode 1920x1080
 setxkbmap -option 'ctrl:nocaps'
 
 xscreensaver -no-splash &
