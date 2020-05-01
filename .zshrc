@@ -11,8 +11,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 plugins=(
   debian
-  docker
   dotenv
+  docker
   git
   pass
   pip
