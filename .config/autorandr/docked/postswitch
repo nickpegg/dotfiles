@@ -1,0 +1,20 @@
+#!/bin/sh
+
+SINK=$(
+  pacmd list-sinks \
+  | grep name \
+  | grep Generic_USB_Audio \
+  | grep headphone \
+  | sed 's/name://g; s/[\t <>]//g;'
+)
+
+pacmd set-default-sink "$SINK"
+xbacklight -set 80
+
+i3-msg '[workspace="2: www"] move workspace to output DP1-1'
+i3-msg '[workspace="3: code"] move workspace to output DP1-2'
+
+# Switch to these workspaces to focus them and not the temporary ones that
+# showed up on these screens
+i3-msg 'workspace "2: www"'
+i3-msg 'workspace "3: code"'
