@@ -1,7 +1,7 @@
 [Unit]
 Description=Run a backup prune and check
-Requires=mnt-borg2.mount
+Requires=mnt-borg.mount
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/borgmatic -v2 prune check
+ExecStart=/bin/bash -c "while ! /usr/bin/borgmatic -v2 prune check; do sleep 30; done"

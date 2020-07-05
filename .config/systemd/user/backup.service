@@ -1,7 +1,7 @@
 [Unit]
 Description=Run a backup
-Requires=mnt-borg2.mount
+Requires=mnt-borg.mount
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/borgmatic create -v2
+ExecStart=/usr/bin/borgmatic create -v2
