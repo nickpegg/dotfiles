@@ -94,6 +94,10 @@ if [ -f "/var/run/reboot-required" ]; then
   cat /var/run/reboot-required
 fi
 
+if [ -d "/opt/android-sdk/platform-tools" ]; then
+  export PATH="$PATH:/opt/android-sdk/platform-tools"
+fi
+
 # Load in a local zshrc if it's available
 if [ -f "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"

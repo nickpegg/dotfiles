@@ -7,3 +7,7 @@
 	ui = auto
 [pager]
 	branch = false
+[hub]
+	protocol = https
+[pull]
+	rebase = false
