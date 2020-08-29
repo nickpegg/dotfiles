@@ -11,6 +11,7 @@ SINK=$(
 pacmd set-default-sink "$SINK"
 xbacklight -set 80
 
+i3-msg '[workspace="1: comms"] move workspace to output DP1-1'
 i3-msg '[workspace="2: www"] move workspace to output DP1-1'
 i3-msg '[workspace="3: code"] move workspace to output DP1-2'
 
