@@ -1,14 +1,14 @@
 #!/bin/sh
 
-SINK=$(
-  pacmd list-sinks \
-  | grep name \
-  | grep Generic_USB_Audio \
-  | grep headphone \
-  | sed 's/name://g; s/[\t <>]//g;'
-)
+#SINK=$(
+#  pacmd list-sinks \
+#  | grep name \
+#  | grep Generic_USB_Audio \
+#  | grep headphone \
+#  | sed 's/name://g; s/[\t <>]//g;'
+#)
 
-pacmd set-default-sink "$SINK"
+#pacmd set-default-sink "$SINK"
 xbacklight -set 80
 
 i3-msg '[workspace="1: comms"] move workspace to output DP1-1'
