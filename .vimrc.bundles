@@ -29,6 +29,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'romainl/Apprentice'
 
+" Tools
+Plugin 'vimwiki/vimwiki'
+
 call vundle#end()
 filetype plugin indent on
 
