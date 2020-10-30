@@ -81,8 +81,12 @@ alias pass-sync="pass git pull && pass git push"
 #export GPG_AGENT_INFO  # the env file does not contain the export statement
 #export SSH_AUTH_SOCK   # enable gpg-agent for ssh
 
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
+# Start a ssh-agent and create SSH_AUTH_SOCK if it's not already set
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+  eval $(ssh-agent -a ${SSH_AUTH_SOCK})
+fi
 
 # If silversearcher is available, use that for FZF file finding
 if which ag > /dev/null; then
