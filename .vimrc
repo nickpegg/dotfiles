@@ -90,6 +90,10 @@ endif
 autocmd BufNewFile,BufRead *.py set colorcolumn=89
 autocmd BufNewFile,BufRead *.py set textwidth=88
 
+" Use 100 char lines in golang
+autocmd BufNewFile,BufRead *.go set colorcolumn=101
+autocmd BufNewFile,BufRead *.go set textwidth=100
+
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
