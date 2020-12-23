@@ -13,6 +13,7 @@ order += "load"
 order += "cpu_temperature 0"
 order += "battery 0"
 
+order += "tztime utc"
 order += "tztime local"
 
 disk "/" {
@@ -46,6 +47,11 @@ cpu_temperature 0 {
 battery 0 {
 	format = "%status %percentage %remaining (%consumption)"
 	low_threshold = 30
+}
+
+tztime utc {
+	format = "%Y-%m-%d %H:%M:%S"
+  timezone = "UTC"
 }
 
 tztime local {
