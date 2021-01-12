@@ -28,7 +28,7 @@ antigen theme gianu
 antigen apply
 
 # Important variables
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.radicle/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then
@@ -41,6 +41,8 @@ if [ -d "$HOME/.pyenv" ]; then
 
   eval "$(pyenv init -)"
 fi
+
+export GOPATH="${HOME}/code/go"
 
 export EDITOR=vim
 
