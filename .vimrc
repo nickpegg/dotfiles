@@ -106,6 +106,19 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" vimwiki
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [
+      \ {
+        \ 'path': '~/vimwiki/',
+        \ 'syntax': 'markdown',
+        \ 'ext': '.md',
+        \ 'path_html': '~/vimwiki/site_html',
+        \ 'custom_wiki2html': 'vimwiki_markdown',
+        \ 'template_path': '~/vimwiki/_build/templates',
+      \ },
+      \ ]
+
 " Include any machine/loality-specific things, try to keep this .vimrc
 " standard across everything
 if filereadable(expand("~/.vimrc.local"))
