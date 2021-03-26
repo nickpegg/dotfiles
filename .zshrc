@@ -42,6 +42,10 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 
+if [ -d "$HOME/.poetry/bin" ]; then
+  export PATH="$HOME/.poetry/bin:$PATH"
+fi
+
 export GOPATH="${HOME}/code/go"
 
 export EDITOR=vim
