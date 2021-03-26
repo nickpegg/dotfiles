@@ -3,6 +3,8 @@
 # Script to do stuff as part of i3 startup. This is mostly here because
 # you can't do conditionals in i3 config
 
+xsetroot -solid "#000000"
+
 setxkbmap -option 'ctrl:nocaps'
 
 # Use xmodmap to neuter some screwy media keys
@@ -10,5 +12,11 @@ if [ -f ~/.xmodmaprc ]; then
   xmodmap ~/.xmodmaprc
 fi
 
-xscreensaver -no-splash &
+autorandr -c
 
+xscreensaver -no-splash &
+nm-applet &
+
+if which dropbox; then
+  dropbox start
+fi
