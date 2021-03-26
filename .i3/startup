@@ -14,6 +14,9 @@ fi
 xrandr --dpi 96 --output eDP1 --mode 1920x1080
 setxkbmap -option 'ctrl:nocaps'
 
+# Detect and load up autorandr screen config
+autorandr -c
+
 xscreensaver -no-splash &
 nm-applet &
 
