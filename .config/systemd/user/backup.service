@@ -1,6 +1,0 @@
-[Unit]
-Description=Run a backup
-
-[Service]
-Type=oneshot
-ExecStart=/home/nick/bin/backup
