@@ -16,6 +16,7 @@ autorandr -c
 
 xscreensaver -no-splash &
 nm-applet &
+pasystray &
 
 if which dropbox; then
   dropbox start
