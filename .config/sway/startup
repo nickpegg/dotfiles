@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Script to do stuff as part of i3 startup. This is mostly here because
+# you can't do conditionals in i3 config
+
+xsetroot -solid "#000000"
+
+setxkbmap -option 'ctrl:nocaps'
+
+# Use xmodmap to neuter some screwy media keys
+if [ -f ~/.xmodmaprc ]; then
+  xmodmap ~/.xmodmaprc
+fi
+
+autorandr -c
+
+LOCK_SEC=600
+exec swayidle -w \
+	timeout "$LOCK_SEC" 'swaylock' \
+	timeout "$LOCK_SEC" 'swaymsg "output * dpms off"' \
+  timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock'
+
+nm-applet &
+pasystray &
+blueberry-tray &
+
+if which dropbox; then
+  dropbox start
+fi
