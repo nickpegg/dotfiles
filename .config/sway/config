@@ -3,6 +3,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 output eDP-1 scale 1.25
+output eDP-1 bg #222222
 
 input type:touchpad {
         tap enabled
