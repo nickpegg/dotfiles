@@ -22,7 +22,7 @@ exec swayidle -w \
 	resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock'
 
-nm-applet &
+nm-applet --indicator &
 pasystray &
 blueberry-tray &
 
