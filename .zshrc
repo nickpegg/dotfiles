@@ -89,9 +89,14 @@ alias pass-sync="pass git pull && pass git push"
 
 
 # Start a ssh-agent and create SSH_AUTH_SOCK if it's not already set
-if [ -z "$SSH_AUTH_SOCK" ]; then
+if [ -z "${SSH_AUTH_SOCK}" ]; then
   export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-  eval $(ssh-agent -a ${SSH_AUTH_SOCK})
+
+  # A systemd service for ssh-agent should have created the socket. Start up an
+  # agent if that's not the case.
+  if [ ! -e "${SSH_AUTH_SOCK}" ]; then
+    eval $(ssh-agent -a ${SSH_AUTH_SOCK})
+  fi
 fi
 
 # If silversearcher is available, use that for FZF file finding
