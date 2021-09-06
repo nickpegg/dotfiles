@@ -2,15 +2,23 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+### display configs ###
+output * bg #222222 solid_color
 output eDP-1 scale 1.1
-output eDP-1 bg #222222 solid_color
-output DP-6 bg #222222 solid_color
+# the rest of screen and mode switching is handled by kanshi
+
+# Turn the laptop screen on/off as the lid is open/closed
+bindswitch --reload --locked lid:off output eDP-1 enable
+bindswitch --reload --locked lid:on output eDP-1 disable
+
+### input configs ###
+# CapsLock as Control
+input * xkb_options caps:ctrl_modifier
 
 input type:touchpad {
         tap enabled
+        dwt enabled
 }
-
-input * xkb_options caps:ctrl_modifier
 
 set $mod Mod4
 
@@ -214,4 +222,4 @@ bindsym $mod+Shift+Escape exec swaylock
 bindsym $mod+p exec swaylock	# Framework F9
 
 # fire off a startup script
-exec /bin/sh ~/.sway/startup
+exec /bin/sh ~/.config/sway/startup
