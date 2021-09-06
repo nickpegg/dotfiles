@@ -3,13 +3,14 @@
 # Script to do stuff as part of sway startup. This is mostly here because
 # you can't do conditionals in sway config
 
-LOCK_SEC=600
+export LOCK_SEC=300
 swayidle -w \
-	timeout "$LOCK_SEC" 'swaylock' \
+	timeout "$LOCK_SEC" 'swaylock -f' \
 	timeout "$LOCK_SEC" 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"' \
 	timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
-	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock' &
+		resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f' &
 
 kanshi &
 nm-applet --indicator &
