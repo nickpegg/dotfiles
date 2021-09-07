@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# Flash your TADA68 keyboard. Run this, hit the flash mode button on the
+# underside of the keyboard, and this will flash it for you.
+#
+# Helps you keep from having an extra keyboard just for flashing purposed, that
+# is unless you flash a bad firmware. ;)
+
+
+# In flash mode, keyboard presents itself as a block device with a FAT partition
+# This is the path to that block device.
+KEYBOARD_DEV="/dev/disk/by-label/TADA68"
+
+MOUNT_POINT="/mnt/tada68"
+
+BINFILE="$1"
+
+
+usage() {
+  echo 'Usage: tada68_flash <BIN_FILENAME>'
+}
+
+check_sudo() {
+  if ! sudo echo; then
+    echo 'unable to get sudo permissions'
+    exit 1
+  fi
+}
+
+wait_for_keyboard() {
+  echo "Waiting for keyboard to be in flash mode..."
+
+  while [ ! -b "$KEYBOARD_DEV" ]; do
+    sleep 0.5
+  done
+}
+
+mount_keyboard() {
+  if [ ! -d "$MOUNT_POINT" ]; then
+    sudo mkdir -p "$MOUNT_POINT"
+  fi
+
+  sudo mount -o flush "$KEYBOARD_DEV" "$MOUNT_POINT"
+}
+
+flash_keyboard() {
+  sudo cp "$BINFILE" "${MOUNT_POINT}/FLASH.BIN"
+  echo "Press the Escape (upper-left-most key) to start using your keyboard"
+}
+
+
+if [ -z "$BINFILE" ]; then
+  usage
+  exit 1
+fi
+
+check_sudo
+wait_for_keyboard
+mount_keyboard
+flash_keyboard

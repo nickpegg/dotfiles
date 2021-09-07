@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Backup GPG and SSH keys, and important passwords to an encrypted tarball
+#
+# Mostly things needed to bootstrap my laptop again after a catastrophe
+
+PATHS=".ssh .gnupg .password-store/borg"
+DATE=$(date +%F)
+
+pushd $HOME
+
+if ! which gpg; then
+  echo "GPG must be installed!"
+  exit 1
+fi
+
+tar cz $PATHS | gpg -c -a > /mnt/usb/$(hostname)-keys.${DATE}.tgz.asc
+
+popd

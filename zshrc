@@ -28,7 +28,7 @@ antigen theme gianu
 antigen apply
 
 # Important variables
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.radicle/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then

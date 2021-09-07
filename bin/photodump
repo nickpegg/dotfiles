@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Dump pictures off of an SD card and into directories by date, based on the
+# EXIF data in each JPG.
+
+
+# Pretty much every command relies on the previous commands, so stop on error
+set -e
+
+DUMP_PATH=~/Pictures/dump
+SD_PATH=/mnt/sd
+CAMERA_PATH="${SD_PATH}/DCIM/100CANON"
+
+# Snag the photos
+mount $SD_PATH
+rsync -auvP "${CAMERA_PATH}/" $DUMP_PATH
+ls -al ${CAMERA_PATH}/*JPG
+rm -I ${CAMERA_PATH}/*JPG || true
+umount /mnt/sd
+
+# Sort pictures into dirs by date based on their EXIF data
+for img in $(find $DUMP_PATH -maxdepth 1 -type f -iname '*jpg'); do
+  date=$(exif --tag 'Date and Time' -m "${img}" | awk '{print $1}' | sed 's/:/-/g')
+  mkdir -p "${DUMP_PATH}/${date}"
+  mv "$img" "${DUMP_PATH}/${date}/"
+done
+
