@@ -1,0 +1,38 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~/dottest']
+
+- link:
+    ~/dottest/.config/:
+      glob: true
+      path: config/**
+    ~/dottest/.gitconfig:
+    ~/dottest/.profile:
+    ~/dottest/.ssh:
+      glob: true
+      path: ssh/**
+    ~/dottest/.terminfo:
+      glob: true
+      path: terminfo/**
+    ~/dottest/.tmux.conf:
+    ~/dottest/.tmux/plugins/tpm: tmux/plugins/tpm
+    ~/dottest/.vim/bundle/Vundle.vim: vim/bundle/Vundle.vim
+    ~/dottest/.vim/ftplugin/python.vim: vim/ftplugin/python.vim
+    ~/dottest/.vimrc:
+    ~/dottest/.vimrc.bundles:
+    ~/dottest/.Xresources.d:
+      glob: true
+      path: Xresources.d/*
+    ~/dottest/.xmodmaprc:
+    ~/dottest/.xscreensaver:
+    ~/dottest/.zsh:
+      glob: true
+      path: zsh/**
+    ~/dottest/.zshrc:
+
+- shell:
+  - command: git submodule update --init --recursive
+    description: Installing submodules
