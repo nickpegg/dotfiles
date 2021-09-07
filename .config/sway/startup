@@ -6,10 +6,11 @@
 export LOCK_SEC=300
 swayidle -w \
 	timeout "$LOCK_SEC" 'swaylock -f' \
-	timeout "$LOCK_SEC" 'swaymsg "output * dpms off"' \
-		resume 'swaymsg "output * dpms on"' \
-	timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
-		resume 'swaymsg "output * dpms on"' \
+	# dpms off has been disabled because it causes the laptop to go to sleep
+	# timeout "$LOCK_SEC" 'swaymsg "output * dpms off"' \
+	# 	resume 'swaymsg "output * dpms on"' \
+	# timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
+	# 	resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f' &
 
 kanshi &
