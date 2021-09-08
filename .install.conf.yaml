@@ -23,6 +23,7 @@
     ~/.vim/bundle/Vundle.vim: vim/bundle/Vundle.vim
     ~/.vim/ftplugin/python.vim: vim/ftplugin/python.vim
     ~/.vimrc:
+    ~/.vimrc.local:
     ~/.vimrc.bundles:
     ~/.Xresources.d:
       glob: true
