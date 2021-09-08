@@ -11,6 +11,7 @@
       path: config/**
     ~/.gitconfig:
     ~/.profile:
+      force: true
     ~/.ssh:
       glob: true
       path: ssh/**
