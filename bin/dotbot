@@ -6,4 +6,4 @@ set -e
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-$BASEDIR/.dotbot/bin/dotbot -c "$BASEDIR/.install.conf.yaml"
+$BASEDIR/.dotbot/bin/dotbot -c "$BASEDIR/install.conf.yaml"
