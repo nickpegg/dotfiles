@@ -1,0 +1,12 @@
+profile mobile {
+  output eDP-1 enable
+}
+
+profile home {
+  output eDP-1 enable position 0,0
+  output DP-6 enable mode 3440x1440@59.973Hz position 2050,0
+}
+
+profile home_closed {
+  output DP-6 enable mode 3440x1440@59.973Hz position 0,0
+}
