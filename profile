@@ -25,3 +25,6 @@ if [ -n "$DESKTOP_SESSION" ] && which gnome-keyring-daemon; then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
+
+# Force Firefox to use Wayland
+export MOZ_ENABLE_WAYLAND=1
