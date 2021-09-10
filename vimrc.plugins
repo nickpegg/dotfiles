@@ -1,0 +1,33 @@
+" filetype off
+" set nocompatible
+
+call plug#begin()
+
+Plug 'VundleVim/Vundle.vim'
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'            " Neato status bar
+Plug 'vim-airline/vim-airline-themes'
+Plug 'roryokane/detectindent'             " Awesome indentation
+Plug 'ntpeters/vim-better-whitespace'     " Auto whitespace fixing
+Plug 'airblade/vim-gitgutter'             " git per-line status in the gutter
+Plug 'junegunn/fzf'                       " Fuzzy finder file search, way faster than Ctrl-p
+Plug 'junegunn/fzf.vim'
+
+" Languages
+Plug 'klen/python-mode'
+" Plug 'psf/black'
+Plug 'elixir-lang/vim-elixir'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'ledger/vim-ledger'
+
+" Themes
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'romainl/Apprentice'
+
+" Tools
+Plug 'vimwiki/vimwiki'
+
+call plug#end()
