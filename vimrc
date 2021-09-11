@@ -30,8 +30,8 @@ set colorcolumn=80
 set splitbelow
 set splitright
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/.vimrc.plugins"))
+  source ~/.vimrc.plugins
 endif
 
 " colorscheme stuff

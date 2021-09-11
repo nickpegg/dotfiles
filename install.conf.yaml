@@ -20,10 +20,11 @@
       path: terminfo/**
     ~/.tmux.conf:
     ~/.tmux/plugins/tpm: tmux/plugins/tpm
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
     ~/.vim/bundle/Vundle.vim: vim/bundle/Vundle.vim
     ~/.vim/ftplugin/python.vim: vim/ftplugin/python.vim
     ~/.vimrc:
-    ~/.vimrc.bundles:
+    ~/.vimrc.plugins:
     ~/.Xresources.d:
       glob: true
       path: Xresources.d/*
