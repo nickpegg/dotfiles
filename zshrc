@@ -60,7 +60,7 @@ fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
 # Set up colors for gruvbox
-gruvbox_palette="$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+gruvbox_palette="$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 if [ -f $gruvbox_palette_path ]; then
     source "$gruvbox_palette"
 fi
