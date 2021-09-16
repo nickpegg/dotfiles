@@ -25,3 +25,5 @@ if [ -n "$DESKTOP_SESSION" ] && which gnome-keyring-daemon; then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
+
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
