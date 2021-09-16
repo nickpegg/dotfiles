@@ -6,7 +6,7 @@ set -e
 
 # Find a python 3.x executable
 PY="/usr/bin/env python"
-if $PY -V | grep -q '2.'; then
+if $PY -V 2>&1 | grep -q '2.'; then
   PY="/usr/bin/env python3"
 fi
 
