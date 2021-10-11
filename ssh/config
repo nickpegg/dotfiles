@@ -8,9 +8,6 @@ Host *.nickpegg.com bertha router hank dean golf
     ForwardAgent yes
     User nick
 
-Host corrado
-    ForwardX11 yes
-
 # Unifi APs
 Host ap1 ap2
     User nickpegg
