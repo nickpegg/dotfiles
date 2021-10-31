@@ -18,6 +18,7 @@ input * xkb_options caps:ctrl_modifier
 input type:touchpad {
         tap enabled
         dwt enabled
+        scroll_factor 0.75
 }
 
 set $mod Mod4
