@@ -3,6 +3,8 @@
 # Script to do stuff as part of sway startup. This is mostly here because
 # you can't do conditionals in sway config
 
+mkdir -p ~/.logs
+
 export LOCK_SEC=300
 swayidle -w \
 	timeout "$LOCK_SEC" 'swaylock -f' \
@@ -12,7 +14,7 @@ swayidle -w \
 		resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f' &
 
-kanshi &
+kanshi >~/.logs/kanshi.log &
 nm-applet --indicator &
 pasystray &
 blueberry-tray &
