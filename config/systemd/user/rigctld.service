@@ -1,0 +1,9 @@
+[Unit]
+Description=rigctld for FT-991A
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rigctld -m 1035 -r /dev/ttyUSB0 -s38400 -v
+
+[Install]
+WantedBy=default.target
