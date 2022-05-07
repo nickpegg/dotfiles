@@ -5,12 +5,16 @@
 set -e
 
 # Find a python 3.x executable
-PY="/usr/bin/env python"
-if $PY -V 2>&1 | grep -q '2.'; then
+if which python >/dev/null; then
+  PY="/usr/bin/env python"
+  if $PY -V 2>&1 | grep -q '2.'; then
+    PY="/usr/bin/env python3"
+  fi
+else
   PY="/usr/bin/env python3"
 fi
 
 # Find the directory for the repo, since that's where dotbot's config lives
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-$PY $BASEDIR/.dotbot/bin/dotbot -c "$BASEDIR/install.conf.yaml"
+$PY $BASEDIR/.dotbot/bin/dotbot -c "$BASEDIR/install.conf.yaml" $@
