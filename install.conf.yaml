@@ -23,6 +23,7 @@
     ~/.vim/autoload/plug.vim: vim-plug/plug.vim
     ~/.vim/bundle/Vundle.vim: vim/bundle/Vundle.vim
     ~/.vim/ftplugin/python.vim: vim/ftplugin/python.vim
+    ~/.vim/ftplugin/hcl.vim: vim/ftplugin/hcl.vim
     ~/.vimrc:
     ~/.vimrc.plugins:
     ~/.Xresources.d:
