@@ -16,12 +16,13 @@ Plug 'junegunn/fzf.vim'
 
 " Languages
 Plug 'klen/python-mode'
-" Plug 'psf/black'
+" Plug 'psf/black', { 'branch': 'stable' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ledger/vim-ledger'
 Plug 'rust-lang/rust.vim'
+Plug 'jvirtanen/vim-hcl'
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
