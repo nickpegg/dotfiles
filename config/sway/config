@@ -4,7 +4,7 @@
 
 ### display configs ###
 output * bg #222222 solid_color
-output eDP-1 scale 1.25
+output eDP-1 scale 1.5
 # the rest of screen and mode switching is handled by kanshi
 
 # Turn the laptop screen on/off as the lid is open/closed
