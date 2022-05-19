@@ -1,4 +1,6 @@
-AddKeysToAgent yes
+# Disabled 2022-05-04 - doesn't play well with vagrant, ends up overloading the
+# agent with keys
+# AddKeysToAgent yes
 
 # Ensure KnownHosts are unreadable if leaked - it is otherwise easier to know
 # which hosts your keys have access to.
