@@ -3,7 +3,7 @@ Description=rigctld for FT-991A
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/rigctld -m 1035 -r /dev/ttyUSB0 -s38400 -v
+ExecStart=/usr/bin/rigctld -m 1035 -r /dev/serial/by-id/usb-Silicon_Labs_CP2105_Dual_USB_to_UART_Bridge_Controller_0112D632-if00-port0 -s38400 -v
 
 [Install]
 WantedBy=default.target
