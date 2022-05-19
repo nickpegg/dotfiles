@@ -5,10 +5,11 @@
 
 mkdir -p ~/.logs
 
-export LOCK_SEC=300
+export LOCK_SEC=600
+export SCREEN_SLEEP_SEC=$(( $LOCK_SEC * 3 ))
 swayidle -w \
 	timeout "$LOCK_SEC" 'swaylock -f' \
-	timeout "$LOCK_SEC" 'swaymsg "output * dpms off"' \
+	timeout "$SCREEN_SLEEP_SEC" 'swaymsg "output * dpms off"' \
 		resume 'swaymsg "output * dpms on"' \
 	timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
 		resume 'swaymsg "output * dpms on"' \
