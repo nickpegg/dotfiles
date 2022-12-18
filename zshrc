@@ -46,6 +46,10 @@ if [ -d "$HOME/.poetry/bin" ]; then
   export PATH="$HOME/.poetry/bin:$PATH"
 fi
 
+if [ -d "/var/lib/flatpak/exports/bin" ]; then
+  export PATH="$PATH:/var/lib/flatpak/exports/bin"
+fi
+
 export GOPATH="${HOME}/code/go"
 
 export EDITOR=vim
