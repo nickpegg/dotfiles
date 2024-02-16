@@ -3,10 +3,13 @@ profile mobile {
 }
 
 profile home {
-  output eDP-1 enable position 0,0
-  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@59.973Hz position 1504,0
+  output "Dell Inc. DELL U2412M M2GCR23J0LTL" enable mode 1920x1200 transform 90 position 0,0
+  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@99.982Hz position 1200,240
+  output eDP-1 enable position 4640,240 scale 1.35
 }
 
 profile home_closed {
-  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@59.973Hz position 0,0
+  output eDP-1 disable
+  output "Dell Inc. DELL U2412M M2GCR23J0LTL" enable mode 1920x1200 transform 90 position 0,0
+  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@99.982Hz position 1200,240
 }
