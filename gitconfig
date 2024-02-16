@@ -1,15 +1,24 @@
 [user]
 	name = Nick Pegg
 	email = nick@nickpegg.com
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+	rebase = false
 [push]
 	default = current
+[merge]
+	conflictstyle = zdiff3
+[rebase]
+	autosquash = true
+	autostash = true
+	updateRefs = true
+[rerere]
+	enabled = true
 [color]
 	ui = auto
 [pager]
 	branch = false
 [hub]
 	protocol = https
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
