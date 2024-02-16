@@ -15,6 +15,7 @@ Host ap1 ap2
     User nickpegg
     # Booo shitty MACs
     MACs hmac-sha1
+    IdentityFile /home/nick/.ssh/polo.id_rsa
 
 Host *
     # Host keys the client accepts - order here is honored by OpenSSH
