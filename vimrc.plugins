@@ -15,14 +15,18 @@ Plug 'junegunn/fzf'                       " Fuzzy finder file search, way faster
 Plug 'junegunn/fzf.vim'
 
 " Languages
-Plug 'klen/python-mode'
+Plug 'sheerun/vim-polyglot'
+" Maybe replaced by polyglot?
+" Plug 'klen/python-mode'
 " Plug 'psf/black', { 'branch': 'stable' }
-Plug 'elixir-lang/vim-elixir'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'ledger/vim-ledger'
-Plug 'rust-lang/rust.vim'
-Plug 'jvirtanen/vim-hcl'
+"
+" Languages replaced by polyglot
+" Plug 'rust-lang/rust.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'jvirtanen/vim-hcl'
+" Plug 'ledger/vim-ledger'
+" Plug 'mxw/vim-jsx'
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
