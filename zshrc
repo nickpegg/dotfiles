@@ -81,6 +81,8 @@ alias fix_completion="rm ~/.zcompdump* ~/.antigen/.zcompdump*"
 alias gum="git checkout master && git pull origin master"
 alias guum="git checkout master && git pull upstream master"
 alias pass-sync="pass git pull && pass git push"
+alias wifi_list="nmcli device wifi list"
+alias wifi_connect="nmcli device wifi connect"
 
 #envfile="$HOME/.gnupg/gpg-agent.env"
 #if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
