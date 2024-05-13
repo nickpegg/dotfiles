@@ -1,0 +1,12 @@
+[Unit]
+Description=EasyEffects audio input processing
+Requires=pipewire.service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/easyeffects --gapplication-service
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
