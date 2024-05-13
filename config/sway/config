@@ -19,6 +19,7 @@ input type:touchpad {
         tap enabled
         dwt enabled
         scroll_factor 0.75
+        click_method button_areas
 }
 
 set $mod Mod4

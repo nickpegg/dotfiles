@@ -15,10 +15,10 @@ swayidle -w \
 		resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f' &
 
-kanshi >~/.logs/kanshi.log &
+kanshi 2>&1 >~/.logs/kanshi.log &
 nm-applet --indicator &
-pasystray &
-blueberry-tray &
+# pasystray &
+# blueberry-tray &
 
 if which dropbox; then
   dropbox start
