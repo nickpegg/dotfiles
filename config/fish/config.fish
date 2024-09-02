@@ -21,8 +21,8 @@ fish_add_path ~/.poetry/bin
 set -g GOPATH ~/code/go
 
 # aliases
+abbr -a bx bundle exec
 abbr -a cx chef exec
-abbr -a cx bundle exec
 abbr -a wifi nmcli device wifi
 abbr -a gum "git switch main && git pull origin main"
 abbr -a guum "git switch main && git pull upstream main"
