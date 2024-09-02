@@ -22,3 +22,7 @@
 	branch = false
 [hub]
 	protocol = https
+[bash]
+	showinformativestatus = true
+	showuntrackedfiles = true
+	showdirtystate = true
