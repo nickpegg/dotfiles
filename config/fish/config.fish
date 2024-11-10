@@ -52,4 +52,8 @@ if status is-interactive
             eval $(ssh-agent -a $SSH_AUTH_SOCK)
         end
     end
+
+    if which direnv > /dev/null
+        direnv hook fish | source
+    end
 end
