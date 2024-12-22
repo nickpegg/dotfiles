@@ -75,7 +75,7 @@ button:hover {
 
 .modules-right > * {
     color: #ebdbb2;
-    background-color: #3c3836;
+    /* background-color: #3c3836; */
 }
 
 #clock,
@@ -199,6 +199,7 @@ label:focus {
 
 #temperature.critical {
     background-color: #fabd2f;
+    color: #504945;
 }
 
 #tray > .passive {
