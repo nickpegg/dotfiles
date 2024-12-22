@@ -72,9 +72,9 @@ let g:ctrlp_show_hidden = 1
 map <C-p> :FZF <CR>
 
 " Fix trailing whitespace on save
-let g:better_whitespace_enabled = 1
-let g:strip_whitespace_on_save = 1
-let g:strip_whitespae_confirm=0
+" let g:better_whitespace_enabled = 1
+" let g:strip_whitespace_on_save = 1
+" let g:strip_whitespae_confirm=0
 
 " Disable python-mode's space errors since vim-better-whitespace does it
 " better
@@ -118,6 +118,26 @@ let g:vimwiki_list = [
         \ 'template_path': '~/vimwiki/_build/templates',
       \ },
       \ ]
+
+" ALE
+set omnifunc=ale#completion#OmniFunc
+let g:airline#extensions#ale#enabled = 1
+let g:ale_fixers = {
+\  'rust': ['rustfmt'],
+\  '*': ['remove_trailing_lines', 'trim_whitespace']
+\}
+let g:ale_fix_on_save = 1
+
+" ALE mappings
+map <Leader>gd :ALEGoToDefinition <CR>
+map <Leader>gi :ALEGoToImplementation <CR>
+map <Leader>r :ALEFindReferences <CR>
+map <Leader>h :ALEHover <CR>
+map <Leader>ss :ALESymbolSearch
+map <Leader>d :ALEDetail <CR>
+map <Leader>f :ALEFirst <CR>
+map <Leader>n :ALENextWrap <CR>
+map <Leader>g :ALENextWrap <CR>
 
 " Include any machine/loality-specific things, try to keep this .vimrc
 " standard across everything
