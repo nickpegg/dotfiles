@@ -1,0 +1,4 @@
+#!/bin/sh
+
+infocmp -x | ssh $1 -- tic -x -
+ssh $1
