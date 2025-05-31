@@ -1,0 +1,5 @@
+timeout 600 'swaylock -f'
+timeout 1800 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+timeout 2400 'systemctl sleep'
+timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' resume 'swaymsg "output * dpms on"'
+before-sleep 'swaylock -f'
