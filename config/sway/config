@@ -41,7 +41,8 @@ font pango:Source Code Pro Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec rofi-sensible-terminal
+# bindsym $mod+Return exec rofi-sensible-terminal
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
