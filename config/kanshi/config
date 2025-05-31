@@ -11,5 +11,5 @@ profile home {
 profile home_closed {
   output eDP-1 disable
   output "Dell Inc. DELL U2412M M2GCR23J0LTL" enable mode 1920x1200 transform 90 position 0,0
-  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@99.982Hz position 1200,240
+  output "Dell Inc. DELL S3422DWG 7B2SS63" enable mode 3440x1440@143.975Hz position 1200,240
 }
