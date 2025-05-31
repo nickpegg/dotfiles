@@ -13,6 +13,7 @@ Plug 'ntpeters/vim-better-whitespace'     " Auto whitespace fixing
 Plug 'airblade/vim-gitgutter'             " git per-line status in the gutter
 Plug 'junegunn/fzf'                       " Fuzzy finder file search, way faster than Ctrl-p
 Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'               " bracket pairing
 
 " LSP support
 Plug 'dense-analysis/ale'
