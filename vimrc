@@ -69,7 +69,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_show_hidden = 1
 
 " fzf settings
-map <C-p> :FZF <CR>
+map <C-p> :GFiles <CR>
 
 " Fix trailing whitespace on save
 " let g:better_whitespace_enabled = 1
@@ -93,6 +93,10 @@ autocmd BufNewFile,BufRead *.py set textwidth=88
 " Use 100 char lines in golang
 autocmd BufNewFile,BufRead *.go set colorcolumn=101
 autocmd BufNewFile,BufRead *.go set textwidth=100
+
+" 100 char lines for Markdown
+autocmd BufNewFile,BufRead *.md set colorcolumn=101
+autocmd BufNewFile,BufRead *.md set textwidth=100
 
 " Break bad habits
 nnoremap <Left> :echoe "Use h"<CR>
@@ -127,11 +131,17 @@ let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace']
 \}
 let g:ale_fix_on_save = 1
+" If things get too annoying
+" g.ale_lint_on_text_changed = 'never'
+" g.ale_lint_on_insert_leave = 0
 
 " ALE mappings
+map <Leader>d :ALEGoToDefinition -split <CR>
 map <Leader>gd :ALEGoToDefinition <CR>
+map <Leader>i :ALEGoToImplementation -split <CR>
 map <Leader>gi :ALEGoToImplementation <CR>
 map <Leader>r :ALEFindReferences <CR>
+map <Leader>l :ALEPopulateLocList <CR>
 map <Leader>h :ALEHover <CR>
 map <Leader>ss :ALESymbolSearch
 map <Leader>d :ALEDetail <CR>
