@@ -1,0 +1,4 @@
+[Unit]
+Description=Current sway session
+Requires=basic.target
+BindsTo=graphical-session.target

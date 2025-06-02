@@ -1,6 +1,6 @@
 [Unit]
-Requires=graphical-session.target
-After=graphical-session.target
+Requires=sway-session.target
+After=sway-session.target
 
 [Service]
 Type=simple
@@ -9,4 +9,4 @@ Restart=always
 RestartSec=10
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=sway-session.target

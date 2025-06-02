@@ -19,3 +19,6 @@ nm-applet --indicator &
 if which dropbox; then
   dropbox start
 fi
+
+# Start the systemd target so that all our session units start up
+systemctl --user start sway-session.target
