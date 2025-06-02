@@ -6,6 +6,8 @@
 # which hosts your keys have access to.
 HashKnownHosts yes
 
+AddKeysToAgent ask
+
 Host *.nickpegg.com bertha router hank dean golf
     ForwardAgent yes
     User nick
