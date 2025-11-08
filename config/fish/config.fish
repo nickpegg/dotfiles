@@ -5,7 +5,7 @@ fish_add_path /var/lib/flatpak/exports/bin
 
 # Ruby stuff
 fish_add_path ~/.rbenv/bin
-if which rbenv > /dev/null
+if which rbenv 2> /dev/null
     eval "$(rbenv init -)"
 end
 
@@ -53,7 +53,7 @@ if status is-interactive
         end
     end
 
-    if which direnv > /dev/null
+    if which direnv 2> /dev/null
         direnv hook fish | source
     end
 end
