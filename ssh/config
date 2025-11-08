@@ -17,6 +17,7 @@ Host ap1 ap2
     User nickpegg
     # Booo shitty MACs
     MACs hmac-sha1
+    HostKeyAlgorithms +rsa-sha2-256
     IdentityFile /home/nick/.ssh/polo.id_rsa
 
 Host *

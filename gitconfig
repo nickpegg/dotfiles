@@ -1,6 +1,8 @@
 [user]
 	name = Nick Pegg
 	email = nick@nickpegg.com
+[help]
+	autoCorrect = true
 [init]
 	defaultBranch = main
 [pull]
