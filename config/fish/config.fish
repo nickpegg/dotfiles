@@ -49,7 +49,7 @@ if status is-interactive
         # A systemd service for ssh-agent should have created the socket. Start up an
         # agent if that's not the case.
         if not test -e $SSH_AUTH_SOCK
-            eval $(ssh-agent -a $SSH_AUTH_SOCK)
+            eval $(ssh-agent -c -a $SSH_AUTH_SOCK)
         end
     end
 
